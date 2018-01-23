@@ -1,0 +1,31 @@
+AppBundle\Entity\Url:
+    type: entity
+    table: null
+    repositoryClass: AppBundle\Repository\UrlRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        original:
+            type: string
+            length: 255
+            unique: true
+        short:
+            type: string
+            length: 100
+            unique: true
+        amount:
+            type: integer
+            options:
+              default: 0
+        created:
+            type: datetime
+        updated:
+            type: datetime
+            nullable: true
+    lifecycleCallbacks:
+        prePersist: [onPrePersist]
+        preUpdate: [onPreUpdate]
