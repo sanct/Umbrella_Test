@@ -37,7 +37,6 @@ class Url
      */
     private $updated;
 
-
     /**
      * Get id
      *
@@ -120,6 +119,14 @@ class Url
         return $this->amount;
     }
 
+	/**
+	 * Increment amount
+	 */
+    public function incrementAmount()
+    {
+    	$this->amount++;
+    }
+
     /**
      * Set created
      *
@@ -173,6 +180,7 @@ class Url
 	 */
 	public function onPrePersist()
 	{
+		$this->amount = 0;
 		$this->created = new \DateTime("now");
 	}
 

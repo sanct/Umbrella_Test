@@ -2,7 +2,9 @@
 
 namespace AppBundle\Repository;
 
+use AppBundle\Entity\Url;
 use \Doctrine\ORM\EntityRepository;
+use \DateTime;
 /**
  * UrlRepository
  *
@@ -11,5 +13,29 @@ use \Doctrine\ORM\EntityRepository;
  */
 class UrlRepository extends EntityRepository
 {
+	/**
+	 * Get info by short url
+	 * @param string $short
+	 *
+	 * @return null|object
+	 */
+	public function getOneByShort(string $short)
+	{
+		return $this->findOneBy(['short' => $short]);
+	}
 
+	/**
+	 * Return expired urls
+	 * @return Url[]
+	 */
+	public function getExpiredUrls()
+	{
+		$expiredDate = new DateTime('-15 days');
+
+		return $this->createQueryBuilder('url')
+			->where('url.created <= :expireDate')
+			->setParameter('expireDate', $expiredDate)
+			->getQuery()
+			->execute();
+	}
 }

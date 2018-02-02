@@ -1,6 +1,9 @@
 AppBundle\Entity\Url:
     type: entity
     table: null
+    indexes:
+      short_url_idx:
+        columns: [ short ]
     repositoryClass: AppBundle\Repository\UrlRepository
     id:
         id:
@@ -15,7 +18,7 @@ AppBundle\Entity\Url:
             unique: true
         short:
             type: string
-            length: 100
+            length: 10
             unique: true
         amount:
             type: integer
