@@ -96,18 +96,22 @@ class UrlListContainer extends React.Component
                             <input
                                 type="text"
                                 className="form-control"
-                                value={this.state.original_url}
+                                defaultValue={this.state.original_url}
                                 onChange={this.handleOriginalChange}
                                 id="original_url"
-
                             />
                         </div>
                     </div>
 
                     <div className='form-group'>
-                        <label className="control-label" htmlFor="short_url">Short url (optional)</label>
-                        <div >
-                            <input type="text" value={this.state.short_url} className="form-control" id="short_url"/>
+                        <label className="control-label" htmlFor="short_url">Short url(optional)</label>
+                        <div>
+                            <input
+                                type="text"
+                                className="form-control"
+                                defaultValue={this.state.short_url}
+                                id="short_url"
+                            />
                         </div>
                     </div>
 
