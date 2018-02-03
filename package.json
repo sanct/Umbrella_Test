@@ -1,5 +1,5 @@
 {
-  "devDependencies": {
+  "dependencies": {
     "@symfony/webpack-encore": "^0.17.1",
     "axios": "^0.17.1",
     "babel-preset-react": "^6.24.1",
