@@ -19,6 +19,9 @@
             "vendor/symfony/symfony/src/Symfony/Component/VarDumper/Resources/functions/dump.php"
         ]
     },
+    "compile": [
+        "yarn run encore production"
+    ],
     "require": {
         "php": ">=5.5.9",
         "ext-bcmath": "*",
