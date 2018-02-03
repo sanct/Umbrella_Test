@@ -72,9 +72,9 @@ class UrlController extends FOSRestController implements ClassResourceInterface
 		$url->setShort($short);
 
 		$errors = $this->validator->validate($url);
-		if (count($errors) > 0)
+		if ($errors->count() > 0)
 		{
-			$errorsString = (string)$errors;
+			$errorsString = (string)$errors->get(0);
 			$this->logger->error($errorsString);
 
 			return new View($errorsString, Response::HTTP_BAD_REQUEST);
