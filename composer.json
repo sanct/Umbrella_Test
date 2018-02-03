@@ -19,9 +19,7 @@
             "vendor/symfony/symfony/src/Symfony/Component/VarDumper/Resources/functions/dump.php"
         ]
     },
-    "compile": [
-        "yarn run encore production"
-    ],
+
     "require": {
         "php": ">=5.5.9",
         "ext-bcmath": "*",
@@ -52,6 +50,9 @@
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::prepareDeploymentTarget"
+        ],
+        "compile": [
+            "yarn run encore production"
         ],
         "post-install-cmd": [
             "@symfony-scripts"
