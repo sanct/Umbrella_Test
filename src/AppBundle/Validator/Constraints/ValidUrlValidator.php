@@ -9,9 +9,9 @@
 namespace AppBundle\Validator\Constraints;
 
 use Symfony\Component\Validator\Constraint;
-use Symfony\Component\Validator\Tests\Fixtures\ConstraintAValidator;
+use Symfony\Component\Validator\ConstraintValidator;
 
-class ValidUrlValidator extends ConstraintAValidator
+class ValidUrlValidator extends ConstraintValidator
 {
 	public function validate($value, Constraint $constraint)
 	{

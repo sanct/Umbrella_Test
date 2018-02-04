@@ -25,7 +25,14 @@ class ShortUrl
 	 */
 	public function isActiveUrl(string $original_url)
 	{
-		$headers = get_headers($original_url, 1);
-		return (substr($headers[0],9,3) == 200);
+		try
+		{
+			$headers = get_headers($original_url, 1);
+			return (substr($headers[0],9,3) == 200);
+		}
+		catch (\Exception $exception)
+		{
+			return false;
+		}
 	}
 }

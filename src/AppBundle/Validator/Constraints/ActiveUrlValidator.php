@@ -10,9 +10,9 @@ namespace AppBundle\Validator\Constraints;
 
 use AppBundle\Utils\ShortUrl;
 use Symfony\Component\Validator\Constraint;
-use Symfony\Component\Validator\Tests\Fixtures\ConstraintAValidator;
+use Symfony\Component\Validator\ConstraintValidator;
 
-class ActiveUrlValidator extends ConstraintAValidator
+class ActiveUrlValidator extends ConstraintValidator
 {
 	private $shortUrl;
 
