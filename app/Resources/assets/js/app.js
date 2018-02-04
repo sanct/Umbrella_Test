@@ -57,7 +57,11 @@ class UrlListContainer extends React.Component
     }
 
     handleOriginalChange (evt) {
-        this.setState({ original_url: evt.target.value });
+        const target = evt.target;
+        const value = target.value;
+        const name = target.name;
+
+        this.setState({ [name]: value });
     };
 
     loadUrls() {
@@ -96,6 +100,7 @@ class UrlListContainer extends React.Component
                             <input
                                 type="text"
                                 className="form-control"
+                                name="original_url"
                                 defaultValue={this.state.original_url}
                                 onChange={this.handleOriginalChange}
                                 id="original_url"
@@ -109,7 +114,9 @@ class UrlListContainer extends React.Component
                             <input
                                 type="text"
                                 className="form-control"
+                                name="short_url"
                                 defaultValue={this.state.short_url}
+                                onChange={this.handleOriginalChange}
                                 id="short_url"
                             />
                         </div>

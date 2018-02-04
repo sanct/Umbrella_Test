@@ -13,7 +13,7 @@ AppBundle\Entity\Url:
             - AppBundle\Validator\Constraints\ActiveUrl: ~
         short:
             - Length:
-                min: 5
+                min: 3
                 max: 10
                 minMessage: 'Short url must be at least {{ limit }} characters long'
                 maxMessage: 'Short url cannot be longer than {{ limit }} characters'
