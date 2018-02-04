@@ -13,9 +13,7 @@ AppBundle\Entity\Url:
                 strategy: AUTO
     fields:
         original:
-            type: string
-            length: 255
-            unique: true
+            type: text
         short:
             type: string
             length: 10

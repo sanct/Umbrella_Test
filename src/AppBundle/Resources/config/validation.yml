@@ -1,11 +1,10 @@
 AppBundle\Entity\Url:
     constraints:
-        - Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity: original
         - Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity: short
     properties:
         original:
             - Length:
-                min: 15
+                min: 3
                 max: 255
             - NotBlank: ~
             - NotNull: ~
@@ -13,7 +12,7 @@ AppBundle\Entity\Url:
             - AppBundle\Validator\Constraints\ActiveUrl: ~
         short:
             - Length:
-                min: 3
+                min: 5
                 max: 10
                 minMessage: 'Short url must be at least {{ limit }} characters long'
                 maxMessage: 'Short url cannot be longer than {{ limit }} characters'
