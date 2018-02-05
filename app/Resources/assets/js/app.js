@@ -32,14 +32,14 @@ class UrlListContainer extends React.Component
         let
             url = {
                 original: this.state.original_url,
-                short: this.state.short_url,
-                amount: 0
+                short: this.state.short_url
             },
             urls = this.state.urls;
 
         axios.post('/api/urls', url)
             .then((response) => {
                 url.short = response.data.short;
+                url.amount = 0;
                 urls.push(url);
                 this.setState({ urls: urls});
             })
