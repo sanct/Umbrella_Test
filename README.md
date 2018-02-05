@@ -6,10 +6,7 @@ A Symfony project created on January 17, 2018, 9:05 pm.
 #Project on Heroku: 
 https://young-dawn-40609.herokuapp.com
 
-#Versions:
-    - Symfony 3.4
-    - PHP 7.1
-    - Mysql 5.7       
+#Versions: Symfony 3.4; PHP 7.1; Mysql 5.7
 
 #Installation local
 1. git clone https://github.com/sanct/Umbrella_Test.git
@@ -32,6 +29,7 @@ https://young-dawn-40609.herokuapp.com
             short: 'value'
         }
 
-#Used packages
+#Used packages:
+
     - Backend: FOSRestBundle(tool for creating a REST API with Symfony).
     - Frontend: axios(Promise based HTTP client), SweetAler(makes popup messages).
