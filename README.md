@@ -28,6 +28,12 @@ https://young-dawn-40609.herokuapp.com
             original: 'value',
             short: 'value'
         }
+        
+#Command for deleting expired urls
+php bin/console urls:expired
+
+#Cron task
+0  1  *  *  * /usr/bin/php /var/www/symfony/bin/console urls:expired
 
 #Used packages:
 
